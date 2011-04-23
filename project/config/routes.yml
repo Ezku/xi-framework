@@ -1,0 +1,5 @@
+all:
+
+dev < all:
+
+prod < all:

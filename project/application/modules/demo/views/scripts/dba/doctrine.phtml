@@ -1,0 +1,53 @@
+<dl>
+<?php foreach ($this->items as $user): ?>
+	<dt>
+	    <?php echo $user->username ?>
+	    <?php if (!empty($user->Groups)): ?>
+	    	<?php
+	    	$groups = array();
+	    	foreach ($user->Groups as $group) {
+	    	    $groups[] = $group->name;
+	    	}
+	    	?>
+	    	(<?php echo join(', ', $groups) ?>)
+	    <?php endif; ?>
+    </dt>
+	<dd>
+		<dl>
+			<dt>Posts</dt>
+			<dd>
+    			<dl>
+    			<?php foreach ($user->Posts as $post): ?>
+    				<dt>Title: <?php echo $post->title ?></dt>
+    				<dd>Content: <?php echo $post->content ?></dd>
+    				<?php if (!empty($post->Tags)): ?>
+        				<dd>
+        				This post has been tagged as:
+        				<ul>
+        				<?php foreach ($post->Tags as $tag): ?>
+        					<li><?php echo $tag->name ?></li>
+        				<?php endforeach; ?>
+        				</ul>
+        				</dd>
+    				<?php endif; ?>
+    				<?php if (!empty($post->Media)): ?>
+    					<dd>
+    					This post has the following media attached:
+    					<ul>
+    					<?php foreach ($post->Media as $media): ?>
+    						<li>
+    						    <?php echo $media->filename ?>
+                        	    <?php if (!empty($media->Tags)): ?>
+                        	    	(Tagged as <?php echo join(', ', $media->getTags()) ?>)
+                        	    <?php endif; ?>
+						    </li>
+						<?php endforeach; ?>
+						</ul>
+					<?php endif; ?>
+    			<?php endforeach; ?>
+    			</dl>
+			</dd>
+		</dl>
+	</dd>
+<?php endforeach; ?>
+</dl>

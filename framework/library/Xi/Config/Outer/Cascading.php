@@ -1,0 +1,152 @@
+<?php
+/**
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+ * "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+ * LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+ * A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+ * OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+ * SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+ * LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+ * DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+ * THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ *
+ * This software consists of voluntary contributions made by many individuals
+ * and is licensed under the LGPL. For more information, see
+ * <http://www.xi-framework.com>.
+ */
+
+/**
+ * Decorates Zend_Config instances retrieved from the inner config with a branch
+ * of itself and keeps account of the child-objects produced
+ *
+ * @category    Xi
+ * @package     Xi_Config
+ * @author      Eevert Saukkokoski <eevert.saukkokoski@brainalliance.com>
+ * @license     http://www.opensource.org/licenses/lgpl-license.php LGPL
+ * @link        http://www.xi-framework.com
+ */
+class Xi_Config_Outer_Cascading extends Xi_Config_Outer
+{
+    /**
+     * @var string
+     */
+    protected $_childClass = __CLASS__;
+
+    /**
+     * @var array
+     */
+    protected $_children = array();
+
+    /**
+     * Create child Xi_Config_Outer_Cascading instance
+     *
+     * @param array|Zend_Config $config
+     * @return Xi_Config_Outer_Cascading
+     */
+    public function createChild($config)
+    {
+        if (!$config instanceof Zend_Config) {
+            $config = $this->createBranch($config);
+        }
+        $class = $this->_childClass;
+        return Xi_Class::create($class, $this->_getChildCreationArguments($config));
+    }
+
+    /**
+     * Get arguments for creating a child Xi_Config_Outer_Cascading instance
+     *
+     * @param Zend_Config $config
+     * @return array
+     */
+    protected function _getChildCreationArguments($config)
+    {
+        return array($config);
+    }
+
+    public function __set($name, $value)
+    {
+        $return = parent::__set($name, $value);
+        unset($this->_children[$name]);
+        return $return;
+    }
+
+    public function __unset($name)
+    {
+        $return = parent::__unset($name);
+        unset($this->_children[$name]);
+        return $return;
+    }
+
+    public function get($name, $default = null)
+    {
+        $value = parent::get($name, $default);
+
+        if (!$value instanceof Zend_Config) {
+            return $value;
+        }
+
+        return $this->getChild($name, $value);
+    }
+    
+    public function getRaw($name)
+    {
+        return parent::get($name);
+    }
+
+    public function current()
+    {
+        $value = parent::current();
+
+        if (!$value instanceof Zend_Config) {
+            return $value;
+        }
+
+        return $this->getChild($this->key(), $value);
+    }
+    
+    /**
+     * @return array
+     */
+    public function toArray()
+    {
+        $result = array();
+        foreach ($this as $key => $value) {
+            if ($value instanceof Zend_Config) {
+                $value = $value->toArray();
+            }
+            $result[$key] = $value;
+        }
+        return $result;
+    }
+
+    /**
+     * Assuming a key and a correspoding Zend_Config object, produce a child
+     * Xi_Config_Outer_Cascading instance
+     *
+     * @param string
+     * @param Zend_Config
+     * @return Xi_Config_Outer_Cascading
+     */
+    public function getChild($name, $value)
+    {
+        if (isset($this->_children[$name]) && ($value === $this->_children[$name]->getConfig())) {
+            return $this->_children[$name];
+        }
+
+        return $this->_children[$name] = $this->createChild($value);
+    }
+
+    /**
+     * Retrieve all currently instantiated children. Does not account for all
+     * children that possibly could be retrieved from the inner Zend_Config
+     * instance.
+     *
+     * @return array Xi_Config_Outer_Cascading instances
+     */
+    public function getChildren()
+    {
+        return $this->_children;
+    }
+}

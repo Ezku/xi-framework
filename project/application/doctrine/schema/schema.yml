@@ -1,0 +1,207 @@
+---
+
+User:
+  columns:
+    id:
+      primary:        true
+      autoincrement:  true
+      type:           integer(10)
+    username:         string(255)
+  actAs:
+    - SoftDelete
+  relations:
+    Groups:
+      class:          UserGroup
+      refClass:       GroupUser
+      foreignAlias:   Users
+    Posts:
+      class:          Post
+      local:          id
+      foreign:        user_id
+      type:           many
+    Media:
+      class:          Media
+      local:          id
+      foreign:        user_id
+      type:           many
+
+UserGroup:
+  columns:
+    id:
+      primary:        true
+      autoincrement:  true
+      type:           integer(10)
+    name:             string(255)
+  actAs:
+    - SoftDelete
+
+GroupUser:
+  tableName:          usergroup_user
+  columns:
+    user_id:
+      primary:        true
+      type:           integer
+      length:         10
+      notnull:        true
+    user_group_id:
+      primary:        true
+      type:           integer
+      length:         10
+      notnull:        true
+  relations:
+    User:
+      onDelete:       CASCADE
+    UserGroup:
+      onDelete:       CASCADE
+
+Tag:
+  columns:
+    id:
+      primary:        true
+      autoincrement:  true
+      type:           integer(10)
+    name:             string(255)
+  relations:
+    Media:
+      class:          Media
+      refClass:       MediaTag
+      foreignAlias:   Tags
+    Posts:
+      class:          Post
+      refClass:       PostTag
+      foreignAlias:   Tags
+
+PostTag:
+  columns:
+    tag_id:
+      primary:        true
+      type:           integer
+      length:         10
+      notnull:        true
+    post_id:
+      primary:        true
+      type:           integer
+      length:         10
+      notnull:        true
+  relations:
+    Tag:
+      onDelete:       CASCADE
+    Post:
+      onDelete:       CASCADE
+
+MediaTag:
+  columns:
+    tag_id:
+      primary:        true
+      type:           integer
+      length:         10
+      notnull:        true
+    media_id:
+      primary:        true
+      type:           integer
+      length:         10
+      notnull:        true
+  relations:
+    Tag:
+      onDelete:       CASCADE
+    Media:
+      onDelete:       CASCADE
+
+Media:
+  columns:
+    id:
+      primary:        true
+      autoincrement:  true
+      type:           integer(10)
+    filename:         string
+    description:      string
+    user_id:
+      type:           integer
+      length:         10
+      notnull:        true
+  actAs:
+    Taggable:
+      refClass:       MediaTag
+  relations:
+    User:
+      class:          User
+      local:          user_id
+      foreign:        id
+
+Image:
+  inheritance:
+    extends:          Media
+    type:             column_aggregation
+    
+Video:
+  inheritance:
+    extends:          Media
+    type:             column_aggregation
+
+PostMedia:
+  columns:
+    post_id:
+      primary:        true
+      type:           integer
+      length:         10
+      notnull:        true
+    media_id:
+      primary:        true
+      type:           integer
+      length:         10
+      notnull:        true
+  relations:
+    Post:
+      onDelete:       CASCADE
+    Media:
+      onDelete:       CASCADE
+
+Post:
+  columns:
+    id:
+      primary:        true
+      autoincrement:  true
+      type:           integer(10)
+    title:            string(255)
+    content:          string
+    user_id:
+      type:           integer
+      length:         10
+      notnull:        true
+    type:
+      type:           enum
+      length:         8
+      values:         ['NewsPost', 'BlogPost']
+  actAs:
+    Timestampable:
+    SoftDelete:
+    Sluggable:
+      fields:         [title]
+      type:           string
+      length:         255
+    Taggable:
+      refClass:       PostTag
+  relations:
+    User:
+      class:          User
+      local:          user_id
+      foreign:        id
+    Media:
+      class:          Media
+      refClass:       PostMedia
+      foreignAlias:   Posts
+
+NewsPost:
+  inheritance:
+    extends:          Post
+    type:             column_aggregation
+    keyField:         type
+    keyValue:         NewsPost
+
+BlogPost:
+  inheritance:
+    extends:          Post
+    type:             column_aggregation
+    keyField:         type
+    keyValue:         BlogPost
+

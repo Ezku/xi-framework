@@ -1,0 +1,12 @@
+<?php
+/**
+ * This file is used to run the test suite from the command line
+ */
+require 'bootstrap.php';
+
+if ((1 == $_SERVER['argc']) || !is_dir(end($_SERVER['argv'])) && !is_file(end($_SERVER['argv']))) {
+	$_SERVER['argv'][] = '--configuration';
+	$_SERVER['argv'][] = dirname(__FILE__) . '/configuration/alltests.xml';
+}
+
+require 'PHPUnit/TextUI/Command.php';

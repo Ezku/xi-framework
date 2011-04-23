@@ -1,0 +1,21 @@
+all:
+
+  enabledModules:              [ default, demo ]
+
+  defaultModuleName:           default
+  defaultControllerName:       index
+  defaultActionName:           index
+
+  useDefaultControllerAlways:  false
+
+  errorHandlerModule:          default
+  errorHandlerController:      error
+  errorHandlerAction:          error
+
+  renderExceptions:            true
+  throwExceptions:             false
+
+dev < all:
+
+prod < all:
+  renderExceptions:            false

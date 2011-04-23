@@ -1,0 +1,50 @@
+all:
+  appName:                App
+  appRoot:                <?php echo dirname(dirname(__FILE__)) ?>
+
+  moduleDir:              :appRoot/modules/:moduleName
+  doctrineDir:            :appRoot/doctrine
+  templateDir:            :appRoot/templates
+
+  app:
+    cacheDir:             :appRoot/data/cache
+    i18n:                 :appRoot/data/i18n
+    include:
+      ':appName':         :appRoot/lib
+
+
+  doctrine:
+    migrations:           :doctrineDir/migrations
+    models:               :doctrineDir/models
+    schema:               :doctrineDir/schema
+    fixtures:             :doctrineDir/data/fixtures
+    sql:                  :doctrineDir/data/sql
+
+  module:
+
+    include:
+      ':moduleName':              :moduleDir/lib
+
+    controllerDir:                :moduleDir/controllers
+    modelDir:                     :moduleDir/models
+    viewDir:                      :moduleDir/views
+
+    model:
+      classPath:                  :modelDir/:controllerNameModel.php
+
+    view:
+      classPath:                  :viewDir/:controllerNameView.php
+      scriptAction:               :action
+      scriptActionWithStatus:     :action/:status
+      suffix:                     phtml
+
+  layout:
+
+    layout:                       layout
+    layoutPath:                   :templateDir/layout
+    inflectorTarget:              :script.:suffix
+    viewSuffix:                   phtml
+
+dev < all:
+
+prod < all:

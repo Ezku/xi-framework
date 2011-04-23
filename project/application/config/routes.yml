@@ -1,0 +1,17 @@
+all:
+  default:
+    route:  :module/:controller/:action/*
+    defaults:
+      module:       default
+      controller:   index
+      action:       index
+  
+  login:
+    route:  user/login/*
+    defaults:
+      module:       default
+      controller:   user
+      action:       login
+
+dev < all:
+prod < all:

@@ -1,0 +1,14 @@
+all:
+  # Must precede rules
+  filterPrefixPath:
+    Xi_Filter_Word:   'Xi/Filter/Word'
+    Zend_Filter:      'Zend/Filter'
+    Zend_Filter_Word: 'Zend/Filter/Word'
+
+  rules:
+    #':moduleName': [CamelCaseToDash, StringToLower]
+    #':controller': [CamelCaseToDash, StringToLower]
+    ':action':     [CamelCaseToDash, StringToLower]
+
+dev < all:
+prod < all:

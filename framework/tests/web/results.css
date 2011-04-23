@@ -1,0 +1,49 @@
+.testsuite .testsuite {
+    display: none;
+}
+
+.summary {
+    padding: 1em;
+    background-color: gray;
+    color: white;
+}
+
+.valid .summary {
+    background-color: green;
+}
+
+.errors .summary {
+    background-color: yellow;
+}
+
+.failures .summary {
+    background-color: red;
+}
+
+.details dd {
+    white-space: pre;
+}
+
+form {
+    margin-top: 1em;
+    clear: both;
+}
+
+dt {
+    font-weight: bold;
+    display: block;
+    float: left;
+}
+dd {
+    margin-left: 5em;
+}
+
+.failure dt {
+    color: red;
+}
+.error dt {
+    color: yellow;
+}
+.warning dt {
+    color: gray;
+}

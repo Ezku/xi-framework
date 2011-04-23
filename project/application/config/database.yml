@@ -1,0 +1,6 @@
+all:
+   default: mysql://root@localhost/xi
+   sqlite: sqlite://:doctrineDir/:appName.db
+
+dev < all:
+prod < all:

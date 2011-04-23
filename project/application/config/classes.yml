@@ -1,0 +1,89 @@
+all:
+
+  session:
+    class:             Zend_Session_Namespace
+
+  user:
+    class:             Xi_User
+    act_as:            singleton
+
+
+  controller.front:
+      factory:         Xi_Controller_Front_Factory
+
+  controller.request:
+      factory:         Xi_Controller_Request_Factory
+
+  controller.response:
+      factory:         Xi_Controller_Response_Factory
+
+  controller.dispatcher:
+      factory:         Xi_Controller_Dispatcher_Factory
+
+  controller.router:
+      factory:         Xi_Controller_Router_Factory
+
+  controller.plugins:
+      -
+        factory:       Xi_Controller_Plugin_ErrorHandler_Factory
+        args:
+          -
+            locate:    config.params
+
+  controller.action.helperbroker:
+      class:           Zend_Controller_Action_HelperBroker
+
+  controller.action.helpers:
+      -
+        locate:        controller.action.helper.viewRenderer
+
+  controller.action.helper.viewRenderer:
+      class:           Xi_Controller_Action_Helper_ViewRenderer
+      args:
+        -
+          locate:      view.engine
+
+  controller.action.dispatcher:
+      class:           Xi_Controller_Action_Dispatcher
+
+  controller.action.model:
+      factory:         Xi_Controller_Model_Factory
+
+  controller.action.view:
+      factory:         Xi_Controller_View_Factory
+
+
+  model.engine:
+    locate:            doctrine.connection
+
+  view.engine:
+    factory:           Xi_View_Factory
+
+  doctrine.connection:
+    factory:           Xi_Doctrine_Connection_Factory
+    act_as:            cached
+
+  config.paths:
+    class:             Xi_Config_Filter_Inflector
+    act_as:            singleton
+    args:
+      -
+        callback:
+          -
+            locate:        config.load
+            args:          [ paths ]
+          - toArray
+      -
+        locate:        config.inflector
+
+  config.inflector:
+    class:             Xi_Filter_Inflector_Recursive
+    act_as:            singleton
+    args:
+      -
+        locate:        config.load
+        args:          [ inflect ]
+
+dev < all:
+
+prod < all:

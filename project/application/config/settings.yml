@@ -1,0 +1,12 @@
+all:
+  errorReporting:    341    # E_PARSE | E_COMPILE_ERROR | E_ERROR | E_CORE_ERROR | E_USER_ERROR
+  errorHandler:      ~      # Error handler callback
+
+  sessionTimeOut:    3600   # Number of seconds of inactivity required for user session to time out
+
+dev < all:
+
+  errorReporting:    8191	# E_ALL | E_STRICT
+  errorHandler:      [ Xi_Exception, handleError ]
+
+prod < all:

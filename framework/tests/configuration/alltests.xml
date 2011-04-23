@@ -1,0 +1,5 @@
+<phpunit>
+    <testsuite>
+        <directory>./Xi/</directory>
+    </testsuite>
+</phpunit>

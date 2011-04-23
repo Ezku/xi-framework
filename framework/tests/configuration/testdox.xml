@@ -1,0 +1,12 @@
+<phpunit>
+    <testsuite name="Xi Framework">
+        <directory>./Xi/</directory>
+    </testsuite>
+    <filter>
+        <!-- Only include Xi files in the code coverage report -->
+        <whitelist>
+            <directory suffix=".php">../core/</directory>
+            <directory suffix=".php">../library/</directory>
+        </whitelist>
+    </filter>
+</phpunit>
