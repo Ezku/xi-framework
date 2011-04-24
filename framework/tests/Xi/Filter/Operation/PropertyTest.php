@@ -4,7 +4,6 @@
  * @package     Xi_Filter
  * @group       Xi_Filter
  * @author      Eevert Saukkokoski <eevert.saukkokoski@brainalliance.com>
- * @link        http://www.xi-framework.com
  */
 class Xi_Filter_Operation_PropertyTest extends PHPUnit_Framework_TestCase
 {

@@ -4,7 +4,6 @@
  * @package     Xi_State
  * @group       Xi_State
  * @author      Eevert Saukkokoski <eevert.saukkokoski@brainalliance.com>
- * @link        http://www.xi-framework.com
  */
 class Xi_State_Machine_RPNTest extends PHPUnit_Framework_TestCase
 {

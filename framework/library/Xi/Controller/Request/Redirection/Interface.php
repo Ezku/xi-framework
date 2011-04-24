@@ -6,7 +6,6 @@
  * @category    Xi
  * @package     Xi_Controller
  * @author      Eevert Saukkokoski <eevert.saukkokoski@brainalliance.com>
- * @link        http://www.xi-framework.com
  */
 interface Xi_Controller_Request_Redirection_Interface
 {

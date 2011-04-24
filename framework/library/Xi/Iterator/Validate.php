@@ -6,7 +6,6 @@
  * @category    Xi
  * @package     Xi_Iterator
  * @author      Eevert Saukkokoski <eevert.saukkokoski@brainalliance.com>
- * @link        http://www.xi-framework.com
  */
 class Xi_Iterator_Validate extends FilterIterator implements Xi_Validate_Aggregate 
 {

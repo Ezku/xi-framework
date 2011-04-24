@@ -3,7 +3,6 @@
  * @category    Xi
  * @package     Xi_Scheduler
  * @author      Eevert Saukkokoski <eevert.saukkokoski@brainalliance.com>
- * @link        http://www.xi-framework.com
  */
 class Xi_Scheduler_Startup extends Xi_Scheduler
 {

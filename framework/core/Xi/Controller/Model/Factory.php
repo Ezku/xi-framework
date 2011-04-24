@@ -6,7 +6,6 @@ Xi_Loader::loadClass('Xi_Controller_Component_Factory');
  * @package     Xi_Controller
  * @subpackage  Xi_Controller_Model
  * @author      Eevert Saukkokoski <eevert.saukkokoski@brainalliance.com>
- * @link        http://www.xi-framework.com
  */
 class Xi_Controller_Model_Factory extends Xi_Controller_Component_Factory
 {

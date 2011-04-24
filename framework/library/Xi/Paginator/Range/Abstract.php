@@ -3,7 +3,6 @@
  * @category    Xi
  * @package     Xi_Paginator
  * @author      Eevert Saukkokoski <eevert.saukkokoski@brainalliance.com>
- * @link        http://www.xi-framework.com
  */
 abstract class Xi_Paginator_Range_Abstract implements Xi_Paginator_Range_Interface
 {

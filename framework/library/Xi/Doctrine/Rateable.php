@@ -4,7 +4,6 @@
  * @package     Xi_Doctrine
  * @subpackage  Xi_Doctrine_Rateable
  * @author      Eevert Saukkokoski <eevert.saukkokoski@brainalliance.com>
- * @link        http://www.xi-framework.com
  */
 class Xi_Doctrine_Rateable extends Doctrine_Template
 {

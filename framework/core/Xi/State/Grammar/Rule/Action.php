@@ -3,7 +3,6 @@
  * @category    Xi
  * @package     Xi_State
  * @author      Eevert Saukkokoski <eevert.saukkokoski@brainalliance.com>
- * @link        http://www.xi-framework.com
  */
 abstract class Xi_State_Grammar_Rule_Action extends Xi_State_Grammar_Rule_Abstract
 {

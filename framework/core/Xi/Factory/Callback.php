@@ -5,7 +5,6 @@ Xi_Loader::loadClass('Xi_Factory');
  * @category    Xi
  * @package     Xi_Factory
  * @author      Eevert Saukkokoski <eevert.saukkokoski@brainalliance.com>
- * @link        http://www.xi-framework.com
  */
 class Xi_Factory_Callback extends Xi_Factory
 {

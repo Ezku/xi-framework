@@ -6,7 +6,6 @@
  * @category    Xi_App
  * @package     Xi_Bootstrap
  * @author      Eevert Saukkokoski <eevert.saukkokoski@brainalliance.com>
- * @link        http://www.xi-framework.com
  */
 
 /**

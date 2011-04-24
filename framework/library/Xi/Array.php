@@ -3,7 +3,6 @@
  * @category    Xi
  * @package     Xi_Array
  * @author      Eevert Saukkokoski <eevert.saukkokoski@brainalliance.com>
- * @link        http://www.xi-framework.com
  */
 class Xi_Array extends ArrayObject
 {

@@ -4,7 +4,6 @@
  * @package     Xi_Locator
  * @group       Xi_Locator
  * @author      Eevert Saukkokoski <eevert.saukkokoski@brainalliance.com>
- * @link        http://www.xi-framework.com
  */
 class Xi_Locator_PropertyAccessTest extends PHPUnit_Framework_TestCase
 {

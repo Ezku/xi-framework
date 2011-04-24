@@ -31,7 +31,6 @@
  * @category    Xi
  * @package     Xi_Exception
  * @author      Eevert Saukkokoski <eevert.saukkokoski@brainalliance.com>
- * @link        http://www.xi-framework.com
  */
 class Xi_Exception extends Zend_Exception
 {

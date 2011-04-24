@@ -4,7 +4,6 @@
  * @package     Xi_Array
  * @group       Xi_Array
  * @author      Eevert Saukkokoski <eevert.saukkokoski@brainalliance.com>
- * @link        http://www.xi-framework.com
  */
 class Xi_Array_ValidateTest extends PHPUnit_Framework_TestCase
 {

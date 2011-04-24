@@ -3,7 +3,6 @@
  * @category    Xi
  * @package     Xi_Config_Reader
  * @author      Eevert Saukkokoski <eevert.saukkokoski@brainalliance.com>
- * @link        http://www.xi-framework.com
  */
 abstract class Xi_Config_Reader extends ArrayObject
 {

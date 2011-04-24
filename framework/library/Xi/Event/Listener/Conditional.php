@@ -6,7 +6,6 @@
  * @category    Xi
  * @package     Xi_Event
  * @author      Eevert Saukkokoski <eevert.saukkokoski@brainalliance.com>
- * @link        http://www.xi-framework.com
  */
 class Xi_Event_Listener_Conditional extends Xi_Event_Listener_Outer implements Xi_Validate_Aggregate
 {

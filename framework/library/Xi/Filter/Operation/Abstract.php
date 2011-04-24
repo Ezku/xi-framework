@@ -5,7 +5,6 @@
  * @category    Xi
  * @package     Xi_Filter
  * @author      Eevert Saukkokoski <eevert.saukkokoski@brainalliance.com>
- * @link        http://www.xi-framework.com
  */
 abstract class Xi_Filter_Operation_Abstract implements Zend_Filter_Interface
 {

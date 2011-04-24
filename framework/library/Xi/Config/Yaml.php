@@ -7,7 +7,6 @@ Xi_Loader::loadClass('Xi_Config');
  * @category    Xi
  * @package     Xi_Config
  * @author      Eevert Saukkokoski <eevert.saukkokoski@brainalliance.com>
- * @link        http://www.xi-framework.com
  */
 class Xi_Config_Yaml extends Xi_Config
 {

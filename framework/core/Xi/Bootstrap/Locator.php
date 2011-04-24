@@ -7,7 +7,6 @@ Xi_Loader::loadClass('Xi_Scheduler_Job');
  * @category    Xi
  * @package     Xi_Bootstrap
  * @author      Eevert Saukkokoski <eevert.saukkokoski@brainalliance.com>
- * @link        http://www.xi-framework.com
  */
 class Xi_Bootstrap_Locator extends Xi_Scheduler_Job
 {

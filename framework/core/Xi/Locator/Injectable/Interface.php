@@ -3,7 +3,6 @@
  * @category    Xi
  * @package     Xi_Locator
  * @author      Eevert Saukkokoski <eevert.saukkokoski@brainalliance.com>
- * @link        http://www.xi-framework.com
  */
 interface Xi_Locator_Injectable_Interface
 {

@@ -4,7 +4,6 @@
  * @package     Xi_Acl
  * @subpackage  Xi_Acl_Assert
  * @author      Eevert Saukkokoski <eevert.saukkokoski@brainalliance.com>
- * @link        http://www.xi-framework.com
  */
 class Xi_Acl_Assert_Validate extends Xi_Validate_Outer implements Zend_Acl_Assert_Interface
 {

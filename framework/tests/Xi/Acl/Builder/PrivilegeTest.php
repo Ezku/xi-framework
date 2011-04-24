@@ -4,7 +4,6 @@
  * @package     Xi_Acl
  * @group       Xi_Acl
  * @author      Eevert Saukkokoski <eevert.saukkokoski@brainalliance.com>
- * @link        http://www.xi-framework.com
  */
 class Xi_Acl_Builder_PrivilegeTest extends PHPUnit_Framework_TestCase 
 {

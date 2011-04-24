@@ -6,7 +6,6 @@
  * @category    Xi
  * @package     Xi_Validate
  * @author      Eevert Saukkokoski <eevert.saukkokoski@brainalliance.com>
- * @link        http://www.xi-framework.com
  */
 class Xi_Validate_Request extends Xi_Validate_Abstract
 {

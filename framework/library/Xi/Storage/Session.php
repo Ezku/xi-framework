@@ -3,7 +3,6 @@
  * @category    Xi
  * @package     Xi_Storage
  * @author      Eevert Saukkokoski <eevert.saukkokoski@brainalliance.com>
- * @link        http://www.xi-framework.com
  */
 class Xi_Storage_Session implements Xi_Storage_Interface
 {

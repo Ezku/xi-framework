@@ -5,7 +5,6 @@
  * @category    Xi
  * @package     Xi_Event
  * @author      Eevert Saukkokoski <eevert.saukkokoski@brainalliance.com>
- * @link        http://www.xi-framework.com
  */
 interface Xi_Event_Subject_Interface
 {

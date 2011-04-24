@@ -4,7 +4,6 @@
  * @package     Xi_Validate
  * @group       Xi_Validate
  * @author      Eevert Saukkokoski <eevert.saukkokoski@brainalliance.com>
- * @link        http://www.xi-framework.com
  */
 class Xi_Validate_OrTest extends Xi_Validate_TestCase
 {

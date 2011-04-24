@@ -5,7 +5,6 @@ Xi_Loader::loadClass('Zend_Controller_Front');
  * @category    Xi
  * @package     Xi_Controller
  * @author      Eevert Saukkokoski <eevert.saukkokoski@brainalliance.com>
- * @link        http://www.xi-framework.com
  */
 class Xi_Controller_Front extends Zend_Controller_Front
 {

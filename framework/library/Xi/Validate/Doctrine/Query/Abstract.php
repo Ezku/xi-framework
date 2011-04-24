@@ -3,7 +3,6 @@
  * @category    Xi
  * @package     Xi_Validate
  * @author      Eevert Saukkokoski <eevert.saukkokoski@brainalliance.com>
- * @link        http://www.xi-framework.com
  */
 abstract class Xi_Validate_Doctrine_Query_Abstract extends Zend_Validate_Abstract
 {

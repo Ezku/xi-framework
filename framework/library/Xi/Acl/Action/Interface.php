@@ -6,7 +6,6 @@
  * @category    Xi
  * @package     Xi_Acl
  * @author      Eevert Saukkokoski <eevert.saukkokoski@brainalliance.com>
- * @link        http://www.xi-framework.com
  */
 interface Xi_Acl_Action_Interface
 {

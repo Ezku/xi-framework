@@ -3,7 +3,6 @@
  * @category    Xi
  * @package     Xi_Paginator
  * @author      Eevert Saukkokoski <eevert.saukkokoski@brainalliance.com>
- * @link        http://www.xi-framework.com
  */
 class Xi_Paginate_Adapter_Array implements Xi_Paginator_Adapter_Interface
 {

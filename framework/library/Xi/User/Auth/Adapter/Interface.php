@@ -7,7 +7,6 @@
  * @package     Xi_User
  * @package     Xi_User_Auth
  * @author      Eevert Saukkokoski <eevert.saukkokoski@brainalliance.com>
- * @link        http://www.xi-framework.com
  */
 interface Xi_User_Auth_Adapter_Interface
 {

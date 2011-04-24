@@ -6,7 +6,6 @@ Xi_Loader::loadClass('Zend_Controller_Request_Http');
  * @package     Xi_Controller
  * @subpackage  Xi_Controller_Request
  * @author      Eevert Saukkokoski <eevert.saukkokoski@brainalliance.com>
- * @link        http://www.xi-framework.com
  */
 class Xi_Controller_Request extends Zend_Controller_Request_Http
 {

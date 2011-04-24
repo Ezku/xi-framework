@@ -4,7 +4,6 @@
  * @package     Xi_View
  * @subpackage  Xi_View_Helper
  * @author      Eevert Saukkokoski <eevert.saukkokoski@brainalliance.com>
- * @link        http://www.xi-framework.com
  */
 class Xi_View_Helper_TextToHtml
 {

@@ -4,7 +4,6 @@
  * @package     Xi_Form
  * @subpackage  Xi_Form_Element
  * @author      Eevert Saukkokoski <eevert.saukkokoski@brainalliance.com>
- * @link        http://www.xi-framework.com
  */
 class Xi_Form_Element_Url extends Zend_Form_Element_Text
 {

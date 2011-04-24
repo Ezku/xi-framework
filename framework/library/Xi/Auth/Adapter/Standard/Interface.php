@@ -4,7 +4,6 @@
  * @package     Xi_Auth
  * @subpackage  Xi_Auth_Adapter
  * @author      Eevert Saukkokoski <eevert.saukkokoski@brainalliance.com>
- * @link        http://www.xi-framework.com
  */
 interface Xi_Auth_Adapter_Standard_Interface extends Zend_Auth_Adapter_Interface
 {

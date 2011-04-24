@@ -4,7 +4,6 @@
  * @package     Xi_Controller
  * @subpackage  Xi_Controller_Dispatcher
  * @author      Eevert Saukkokoski <eevert.saukkokoski@brainalliance.com>
- * @link        http://www.xi-framework.com
  */
 class Xi_Controller_Dispatcher_Factory extends Xi_Factory
 {

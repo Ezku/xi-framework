@@ -4,7 +4,6 @@
  * @package     Xi_Translate
  * @subpackage  Xi_Translate_Context
  * @author      Eevert Saukkokoski <eevert.saukkokoski@brainalliance.com>
- * @link        http://www.xi-framework.com
  */
 class Xi_Translate_Context implements Xi_Translate_Context_Interface
 {

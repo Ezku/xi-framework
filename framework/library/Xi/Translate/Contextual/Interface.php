@@ -4,7 +4,6 @@
  * @package     Xi_Translate
  * @subpackage  Xi_Translate_Contextual
  * @author      Eevert Saukkokoski <eevert.saukkokoski@brainalliance.com>
- * @link        http://www.xi-framework.com
  */
 interface Xi_Translate_Contextual_Interface extends Countable
 {

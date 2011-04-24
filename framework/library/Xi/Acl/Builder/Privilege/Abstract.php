@@ -3,7 +3,6 @@
  * @category    Xi
  * @package     Xi_Acl
  * @author      Eevert Saukkokoski <eevert.saukkokoski@brainalliance.com>
- * @link        http://www.xi-framework.com
  */
 abstract class Xi_Acl_Builder_Privilege_Abstract extends Xi_Acl_Builder_Resource
 {

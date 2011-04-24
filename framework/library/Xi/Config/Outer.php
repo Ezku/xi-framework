@@ -5,7 +5,6 @@
  * @category    Xi
  * @package     Xi_Config
  * @author      Eevert Saukkokoski <eevert.saukkokoski@brainalliance.com>
- * @link        http://www.xi-framework.com
  */
 class Xi_Config_Outer extends Xi_Config implements Xi_Config_Aggregate
 {

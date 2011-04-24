@@ -3,7 +3,6 @@
  * @category    Xi
  * @package     Xi_Paginator
  * @author      Eevert Saukkokoski <eevert.saukkokoski@brainalliance.com>
- * @link        http://www.xi-framework.com
  */
 class Xi_Paginator_Page_Collection_Iterator implements SeekableIterator, Countable
 {

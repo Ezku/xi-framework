@@ -6,7 +6,6 @@
  * @package     Xi_Controller
  * @subpackage  Xi_Controller_Plugin
  * @author      Eevert Saukkokoski <eevert.saukkokoski@brainalliance.com>
- * @link        http://www.xi-framework.com
  */
 class Xi_Controller_Plugin_Validate extends Xi_Controller_Plugin_Outer implements Xi_Validate_Aggregate
 {

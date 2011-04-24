@@ -6,7 +6,6 @@ Xi_Loader::loadClass('Xi_Config_Reader');
  * @package     Xi_Config
  * @subpackage  Xi_Config_Reader
  * @author      Eevert Saukkokoski <eevert.saukkokoski@brainalliance.com>
- * @link        http://www.xi-framework.com
  */
 class Xi_Config_Reader_Php extends Xi_Config_Reader
 {
