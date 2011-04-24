@@ -6,7 +6,8 @@
  * @category    Xi
  * @package     Xi_Date
  * @author      Eevert Saukkokoski <eevert.saukkokoski@brainalliance.com>
- */class Xi_Date
+ */
+class Xi_Date
 {
 	/**
 	 * @var int unix timestamp
