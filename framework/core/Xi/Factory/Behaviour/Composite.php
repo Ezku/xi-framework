@@ -5,7 +5,6 @@ Xi_Loader::loadInterface('Xi_Factory_Behaviour_Interface');
  * @category    Xi
  * @package     Xi_Factory
  * @author      Eevert Saukkokoski <eevert.saukkokoski@brainalliance.com>
- * @license     http://www.opensource.org/licenses/lgpl-license.php LGPL
  * @link        http://www.xi-framework.com
  */
 abstract class Xi_Factory_Behaviour_Composite implements Xi_Factory_Behaviour_Interface

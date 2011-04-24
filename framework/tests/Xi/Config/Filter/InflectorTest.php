@@ -4,7 +4,6 @@
  * @package     Xi_Config
  * @group       Xi_Config
  * @author      Eevert Saukkokoski <eevert.saukkokoski@brainalliance.com>
- * @license     http://www.opensource.org/licenses/lgpl-license.php LGPL
  * @link        http://www.xi-framework.com
  */
 class Xi_Config_Filter_InflectorTest extends PHPUnit_Framework_TestCase

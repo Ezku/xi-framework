@@ -4,7 +4,6 @@
  * @package     Xi_User
  * @package     Xi_User_Validate
  * @author      Eevert Saukkokoski <eevert.saukkokoski@brainalliance.com>
- * @license     http://www.opensource.org/licenses/lgpl-license.php LGPL
  * @link        http://www.xi-framework.com
  */
 class Xi_User_Validate_Auth extends Zend_Validate_Abstract

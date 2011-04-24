@@ -4,7 +4,6 @@
  * @package     Xi_Filter
  * @subpackage  Xi_Filter_Inflector
  * @author      Eevert Saukkokoski <eevert.saukkokoski@brainalliance.com>
- * @license     http://www.opensource.org/licenses/lgpl-license.php LGPL
  * @link        http://www.xi-framework.com
  */
 class Xi_Filter_Inflector_Recursive extends Xi_Filter_Outer

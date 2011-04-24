@@ -3,7 +3,6 @@
  * @category    Xi
  * @package     Xi_Paginator
  * @author      Eevert Saukkokoski <eevert.saukkokoski@brainalliance.com>
- * @license     http://www.opensource.org/licenses/lgpl-license.php LGPL
  * @link        http://www.xi-framework.com
  */
 interface Xi_Paginator_Range_Interface

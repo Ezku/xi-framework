@@ -6,7 +6,6 @@
  * @package     Xi_Layout
  * @subpackage  Xi_Layout_Controller
  * @author      Eevert Saukkokoski <eevert.saukkokoski@brainalliance.com>
- * @license     http://www.opensource.org/licenses/lgpl-license.php LGPL
  * @link        http://www.xi-framework.com
  */
 class Xi_Layout_Controller_Plugin_Switcher extends Zend_Controller_Plugin_Abstract

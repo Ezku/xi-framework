@@ -5,7 +5,6 @@ Xi_Loader::loadClass('Xi_Factory');
  * @category    Xi
  * @package     Xi_Controller
  * @author      Eevert Saukkokoski <eevert.saukkokoski@brainalliance.com>
- * @license     http://www.opensource.org/licenses/lgpl-license.php LGPL
  * @link        http://www.xi-framework.com
  */
 abstract class Xi_Controller_Component_Factory extends Xi_Factory

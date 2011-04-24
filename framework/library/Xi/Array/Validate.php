@@ -4,7 +4,6 @@
  * @package     Xi_Array
  * @subpackage  Xi_Array_Validate
  * @author      Eevert Saukkokoski <eevert.saukkokoski@brainalliance.com>
- * @license     http://www.opensource.org/licenses/lgpl-license.php LGPL
  * @link        http://www.xi-framework.com
  */
 class Xi_Array_Validate extends Xi_Array implements Xi_Validate_Aggregate

@@ -4,7 +4,6 @@
  * @package     Xi_Acl
  * @group       Xi_Acl
  * @author      Eevert Saukkokoski <eevert.saukkokoski@brainalliance.com>
- * @license     http://www.opensource.org/licenses/lgpl-license.php LGPL
  * @link        http://www.xi-framework.com
  */
 class Xi_Acl_Builder_RoleTest extends PHPUnit_Framework_TestCase

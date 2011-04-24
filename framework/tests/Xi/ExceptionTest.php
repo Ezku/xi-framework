@@ -4,7 +4,6 @@
  * @package     Xi_Exception
  * @group       Xi_Exception
  * @author      Eevert Saukkokoski <eevert.saukkokoski@brainalliance.com>
- * @license     http://www.opensource.org/licenses/lgpl-license.php LGPL
  * @link        http://www.xi-framework.com
  */
 class Xi_ExceptionTest extends PHPUnit_Framework_TestCase

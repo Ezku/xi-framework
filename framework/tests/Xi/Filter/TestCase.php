@@ -4,7 +4,6 @@
  * @package     Xi_Filter
  * @group       Xi_Filter
  * @author      Eevert Saukkokoski <eevert.saukkokoski@brainalliance.com>
- * @license     http://www.opensource.org/licenses/lgpl-license.php LGPL
  * @link        http://www.xi-framework.com
  */
 class Xi_Filter_TestCase extends PHPUnit_Framework_TestCase 

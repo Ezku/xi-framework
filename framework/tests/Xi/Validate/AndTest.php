@@ -4,7 +4,6 @@
  * @package     Xi_Validate
  * @group       Xi_Validate
  * @author      Eevert Saukkokoski <eevert.saukkokoski@brainalliance.com>
- * @license     http://www.opensource.org/licenses/lgpl-license.php LGPL
  * @link        http://www.xi-framework.com
  */
 class Xi_Validate_AndTest extends Xi_Validate_TestCase
